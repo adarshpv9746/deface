@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/jquery.terminal/js/jquery.terminal.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/jquery.terminal/css/jquery.terminal.min.css" />
 </head>
+
 <body>
-<script>
-$('body').terminal({
-    hello: function(what) {
-        this.echo('Hellooooo');
-    }
-}, {
-    greetings: 'Test website'
-});
-</script>
-<virtual-consultation></virtual-consultation><script type='text/javascript' src='https://qa.practicecatapult.com/vc-widget/virtual-consultation.min.js?token=308b0d609389c6478f9530e95ac72674'></script>
+    <script>
+        $('#term_demo').terminal(function (command) {
+            if (command !== '') {
+                try {
+                    var result = __EVAL(command);
+                    if (result !== undefined) {
+                        this.echo(new String(result));
+                    }
+                } catch (e) {
+                    this.error(new String(e));
+                }
+            } else {
+                this.echo('');
+            }
+        }, {
+            greetings: 'Test website',
+            name: 'js_demo',
+            height: 200,
+            prompt: 'js> '
+        });
+    </script>
+    <virtual-consultation></virtual-consultation>
+    <script type='text/javascript'
+        src='https://qa.practicecatapult.com/vc-widget/virtual-consultation.min.js?token=308b0d609389c6478f9530e95ac72674'></script>
 </body>
+
 </html>
