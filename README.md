@@ -1,2 +1,1 @@
 # deface
-<virtual-consultation></virtual-consultation><script type='text/javascript' src='https://qa.practicecatapult.com/vc-widget/virtual-consultation.min.js?token=308b0d609389c6478f9530e95ac72674'></script>
