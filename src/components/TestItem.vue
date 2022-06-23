@@ -1,7 +1,6 @@
 <template>
     <div>
-        <h1>Sorry we are currently developing..</h1>
-        <h2>{{data}}{{msg}}</h2>
+        <h1>Sorry we are currently developing..{{data}}{{msg}}</h1>
     </div>
 </template>
 <script>
