@@ -1,7 +1,8 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
+  <img alt="Vue logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif">
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <TestItem data='Please' msg='wait...'/>
+  <TestItem/>
+  <!-- <TestItem data='Hello new user' msg='click here'/> -->
 </template>
 
 <script>
