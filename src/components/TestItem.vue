@@ -23,14 +23,15 @@ export default {
 </script>
 <style>
 .button {
+  border-radius: 100px;
   border: none;
   color: white;
-  padding: 15px 32px;
+  padding: 15px 60px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
+  margin: 4px 20px;
   cursor: pointer;
 }
 .button1 {background-color: #4CAF50;} /* Green */
