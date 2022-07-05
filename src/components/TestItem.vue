@@ -3,7 +3,7 @@
         <!-- <h1>Az033 {{data}}</h1>
         <a href="adzvue.netlify.app">{{msg}}</a> -->
         <h1 class="center">
-        <img v-if="show" alt="Vue logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif">
+        <img v-if="walk&&fly&&drive" alt="Vue logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif">
         <img v-if="!walk" alt="Vue logo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1abfa455389655.59822ff82373e.gif" >
         <img v-if="!fly" alt="Vue logo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/4029a055389655.59822ff823c19.gif" >
         <img v-if="!drive" alt="Vue logo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/0f7cda43377507.57ecc15d6620f.gif" >
@@ -43,13 +43,12 @@ export default {
                     this.fly=true;
                     
                 }
-                else{
+                else if(a=='walk'){
                     this.walk=!this.walk;
                     this.fly=true;
                     this.drive=true;
                     
                 }
-                this.show=false;
 
                 
         }
