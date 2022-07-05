@@ -2,10 +2,19 @@
     <div>
         <!-- <h1>Az033 {{data}}</h1>
         <a href="adzvue.netlify.app">{{msg}}</a> -->
-        <h3>
-        <button class="button button1" v-on:click="button('green')">Green</button>
-        <button class="button button2" v-on:click="button('blue')">Blue</button>
-        </h3>
+        <img v-if="show" alt="Vue logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif" class="center">
+        <img v-if="!walk" alt="Vue logo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1abfa455389655.59822ff82373e.gif" class="center">
+        <img v-if="!fly" alt="Vue logo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/4029a055389655.59822ff823c19.gif" class="center">
+        <img v-if="!drive" alt="Vue logo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/0f7cda43377507.57ecc15d6620f.gif" class="center">
+        <h1 class="testitem">
+        <button class="button button1" v-if="fly" v-on:click="button('fly')">Fly</button>
+        <button class="button button1" v-if="!fly" v-on:click="button('fly')">fly</button>
+        <button class="button button2" v-if="drive" v-on:click="button('drive')">Drive</button>
+        <button class="button button2" v-if="!drive" v-on:click="button('drive')">drive</button>
+        <button class="button button3" v-if="walk" v-on:click="button('walk')">Walk</button>
+        <button class="button button3" v-if="!walk" v-on:click="button('walk')">walk</button>
+
+        </h1>
     </div>
 </template>
 <script>
@@ -14,9 +23,32 @@ export default {
     props:{
         data:String,
         msg:String
-    }, methods:{
+    },data(){
+        return{show:true,fly:true,drive:true,walk:true}
+        },
+        methods:{
         button(a){
-                alert(a+' button clicked')
+                // alert(' button clicked')
+                if(a=='fly'){
+                    this.fly=!this.fly;
+                    this.walk=true;
+                    this.drive=true;
+                    this.show=!this.show;
+                }
+                else if(a=='drive'){
+                    this.drive=!this.drive;
+                    this.walk=true;
+                    this.fly=true;
+                    this.show=!this.show;
+                }
+                else{
+                    this.walk=!this.walk;
+                    this.fly=true;
+                    this.drive=true;
+                    this.show=!this.show;
+                }
+
+                
         }
     }
 }
@@ -36,4 +68,17 @@ export default {
 }
 .button1 {background-color: #4CAF50;} /* Green */
 .button2 {background-color: #008CBA;} /* Blue */
+.button3 {background-color: #494f51;}
+.center {
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.testitem{
+  position: relative;
+  top:  505px;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
 </style>

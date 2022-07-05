@@ -1,8 +1,8 @@
 <template>
 <head><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"></head>
-  <img alt="Vue logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif" class="center">
+  <!-- <img alt="Vue logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif" class="center"> -->
   <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-  <TestItem class="testitem"/>
+  <TestItem />
   <!-- <TestItem data='Hello new user' msg='click here'/> -->
 </template>
 
@@ -28,17 +28,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-.center {
-  position: absolute;
-  top:  50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
 
-.testitem{
-  position: relative;
-  top:  505px;
-  left: 50%;
-  transform: translate(-50%,-50%);
-}
 </style>
