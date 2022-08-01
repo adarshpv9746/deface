@@ -5,7 +5,7 @@
         <h1 class="center">
         <img v-if="walk&&fly&&drive" alt="Vue logo" src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif">
         <img v-if="!walk" alt="Vue logo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/1abfa455389655.59822ff82373e.gif" >
-        <img v-if="!fly" alt="Vue logo" src="https://pin.it/1Ft3Rhr" >
+        <img v-if="!fly" alt="Vue logo" src="https://cdn.dribbble.com/users/1118376/screenshots/3048570/media/dba90d4a0965a68fe7d829d89cd1fc01.gif">
         <img v-if="!drive" alt="Vue logo" src="https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/0f7cda43377507.57ecc15d6620f.gif" >
         </h1>
         <h2 class="testitem">
